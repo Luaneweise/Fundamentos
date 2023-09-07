@@ -1,0 +1,22 @@
+/******************************************************************************
+Realice un programa que lea la entrada de los sgtes datos de una persona. edad: tipo entero,
+sexo: tipo caractes y altura: tipo real******
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+int main () { 
+    int edad;
+    char sexo[10];
+    float altura;
+    
+    cout<<"Ingrese la edad: ";cin>> edad;
+    cout<<"Ingrese el sexo: ";cin>> sexo;
+    cout<<"Ingrese la altura: ";cin>> altura;
+    
+    cout<<"edad: "<<edad<<endl;
+    cout<<"sexo: "<<sexo<<endl;
+    cout<<"altura: "<<altura<<endl;
+    
+    return 0;
+}
+    
