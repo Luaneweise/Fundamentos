@@ -1,0 +1,14 @@
+//Escribe un programa que lea la entrada de 2 numeros y muestre en la salida la suma, resta, multiplicacion y division.//
+
+#include <iostream>
+using namespace std;
+int main () {
+    double precio;
+    double iva=13.33;
+    cout<<"ingrese el precio del producto: ";
+    cin>>precio;
+    double precioconiva= precio*(1*iva);
+    
+    cout<<"El precio con iva es: "<<precioconiva<<endl;
+    return 0; 
+}
