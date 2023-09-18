@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int n;
+    float suma=0, promedio;
+    do {
+        cout << "Ingrese el valor de N ";
+        cin >> n;
+    } while (n <= 0);
+    
+    for (int i = 1; i <= n; i++)  //inicializacion, condicion, incremento
+    {
+        cout << i << "+";
+    
+        suma = suma + i;
+    }
+    //Mostrar el resultado
+    cout <<endl<< "La sumatoria es: " << suma;
+    
+}
