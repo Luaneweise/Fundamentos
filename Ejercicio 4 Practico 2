@@ -1,0 +1,34 @@
+// Ejercicio 4 serie 1.cpp : Calcular la siguiente suma S=1-2+3-4+5-..+/-N.
+//
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int n;
+    double suma = 0.0;
+    int i = 1;
+    do {
+
+        cout << "Ingrese el valor de n: ";
+        cin >> n;
+    } while (n <= 0);
+    do{ 
+        if (i % 2 == 1) {
+            //Si i es impar, suma i
+            suma += i;
+        } else {
+            //Si i es par, resta i
+            suma -= i;
+        }
+        i++; //Contador
+    } while (i <= n);
+    
+    cout << " La suma es: " << suma;
+
+    return 0;
+   
+}
+
