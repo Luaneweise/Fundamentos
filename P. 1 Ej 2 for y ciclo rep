@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+const double PI = 3.14;
+int main()
+{
+   int diametro;
+   
+   for (int i=0; i<2; i++) {
+       cout<<"Ingrese el diametro de la esfera: ";
+       cin>>diametro;
+       
+       double radio = diametro/2.0;
+       double circunferencia = PI*diametro;
+       double area = 4*PI*pow(radio,2);
+       double volumen=(4.0/3.0)*PI*pow(radio,3);
+       
+       cout<<"Circunferencia de la esfera: "<<circunferencia<<endl;
+       cout<<"Area superficial de la esfera: "<<area<<endl;
+       cout<<"Volumen de la esfera: "<<volumen<<endl;
+   }
+    
+    return 0;
+}
