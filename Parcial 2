@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+    int numApuestas, suma=0, idC, cedula, monto; 
+    char resp;
+    do {
+        
+        cout<<"Ingrese el Id de carrera: ";
+        cin>>idC;
+        cout<<"Ingrese la cedula del apostador: ";
+        cin>>cedula;
+        cout<<"Ingrese el monto de dinero apostado: ";
+        cin>>monto; 
+        suma=suma + monto;
+        cout<<"Desea continuar s/n: ";
+        cin>>resp;
+    } while (resp != 'n');
+    cout<<"El monto apostado es: "<<suma<<endl;
+
+
+return 0;
+} 
