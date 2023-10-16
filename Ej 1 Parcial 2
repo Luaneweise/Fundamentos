@@ -1,0 +1,30 @@
+El club Hipico Hidalgo desea tener un sistema que le permita registrar las apuestas que realizan los apostadores. Para cada apuesta necesita registrar la siguiente informacion
+ Id de la carrera, cedula del apostador y monto de dinero que espuesta.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int numApuestas, suma=0, idC, cedula, monto; 
+    
+    cout<<"Cuantas apuestas desea registrar: ";
+    cin>>numApuestas;
+    
+    for (int i=1; i<= numApuestas; i++)
+    {
+        cout<<"Ingrese el Id de carrera: ";
+        cin>>idC;
+        cout<<"Ingrese la cedula del apostador: ";
+        cin>>cedula;
+        cout<<"Ingrese el monto de dinero apostado: ";
+        cin>>monto; 
+        suma=suma + monto;
+    } 
+    cout<<"El monto apostado es: "<<suma<<endl;
+
+
+return 0;
+} 
