@@ -1,0 +1,69 @@
+// Vectores Paralelos.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+
+
+
+#include <iostream>
+#include <string>
+#define MAX 100
+
+void cargar(string nombre[], int n, float nota[]);
+void mostrar(string nombre[], int n, float nota[]);
+void burbujanombre(string nombre[], int n, float nota[]);
+void burbujanota(string nombre[], int n, float nota[]);
+
+using namespace std;
+
+int main()
+{
+    string Nombre[MAX];
+    float Nota[MAX];
+    int n;
+    //Solicitar pero con validacion
+    do {
+        cout << "Ingrese el numero de estudiantes: ";
+        cin >> n; 
+    } while ((n < 0)) || (n > MAX));
+    cargar(Nombre, n, Nota);
+    cout << "La lista de estidiantes es: " << endl;
+    burbujanombre(Nombre, n, Nota);
+    mostrar(Nombre, n, Nota);
+    cout << endl<< "La lista de estidiantes es: " << endl;
+    burbujanota(Nombre, n, Nota);
+    mostrar(Nombre, n, Nota);
+}
+
+void cargar(string nombre[], int n, float nota[]);
+{
+    cout << "Ingresar los datos Nombre \t Nota";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> nombre[1];
+        cout << "\t"
+            cin >> nota[1];
+    }
+}
+
+void mostrar(string nombre[], int n, float nota[]);
+{
+    cout << "Nombre \t"
+}
+
+void burbujanombre(string nombre[], int n, float nota[]);
+{
+    string aux;
+    int aux 2;
+    for (int i=0; i<n-1; i++)
+        for (int j=i; j<n; j++)
+            if (nombre[1] > nombre[j])
+            {
+                aux = nombre[i];
+                aux2 = nota[i];
+                nombre[i] = nombre[j];
+                nota[i] = nota[j];
+                nombre[j] = aux;
+                nota[j] = aux 2;
+            }
+}
+void burbujanota(string nombre[], int n, float nota[]);
