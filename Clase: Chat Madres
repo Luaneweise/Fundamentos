@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string nombreUsuario;
+    cout << "Hola, mamá. Ingresa tu nombre de usuario: ";
+    getline(cin, nombreUsuario);
+
+    cout << "Bienvenida, " << nombreUsuario << ". Comienza a chatear (escribe 'salir' para terminar):\n";
+
+    while (true) {
+        string mensaje;
+        cout << nombreUsuario << ": ";
+        getline(cin, mensaje);
+
+        if (mensaje == "salir") {
+            cout << "Saliendo del chat. ¡Hasta luego, " << nombreUsuario << "!\n";
+            break;
+        }
+
+        cout << "Otra madre: " << mensaje << "\n";
+    }
+
+    return 0;
+}
