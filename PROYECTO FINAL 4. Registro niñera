@@ -1,0 +1,106 @@
+//Registro de Niñera
+//Adrian Padilla
+#include <iostream>
+#include <string>
+#define MAX 1000
+
+using namespace std;
+
+struct usuario {
+    string id;
+    string password;
+    string nombre1;
+    string apaterno1;
+    string amaterno1;
+    string edad1;
+    string direccion1;
+    string telefono1;
+    string linkcuv1;
+};
+
+usuario V[MAX];
+
+bool iniciarsesion();
+void registrarse();
+int contuser=0;
+
+int main()
+{
+    int opcion, opcion1;
+    do {
+        cout << "-------MATERNITY-------" << endl;
+        cout << "[1] Iniciar sesion" << endl;
+        cout << "[2] Registrarse" << endl;
+        cout << "[0] SALIR" << endl;
+        cout << "-----------------------" << endl;
+        cout << endl;
+        cout << "Elegir una opcion: ";
+        cin >> opcion;
+        switch (opcion) {
+        case 1: iniciarsesion();
+            break;
+        case 2: registrarse();
+            break;
+        case 0: cout << "SALISTE" << endl;
+            return 0;
+            break;
+        default: cout << "opcion invalida" << endl;
+        }
+    } while (opcion != 0);
+
+    return 0;
+}
+
+bool iniciarsesion() {
+    string correo, contra;
+    cout << "Ingresar correo: ";
+    cin >> correo;
+    cout << "Ingresar contraseña: ";
+    cin >> contra;
+    for (int i = 0; i < contuser; i++) {
+        if (V[i].id == correo && V[i].password == contra) {
+            if (i == 0) {
+                cout << "Bienvenida Niñera" << endl;
+            }
+        }
+            else {
+            cout << "Correo o contraseña incorrectos." << endl;
+        }
+    }
+    return false;
+}
+void registrarse() {
+    string correo, contra, nombre, apaterno, amaterno, edad, direccion, telefono, linkcuv;
+    cout << "-------MATERNITY-------" << endl;
+    cout << "Coloca tu correo para tu perfil: ";
+    cin >> correo;
+    cout << "Crea una contraseña: ";
+    cin >> contra;
+    cout << "Ingresa tu nombre: ";
+    cin >> nombre;
+    cout << "Ingresa tu apellido paterno: ";
+    cin >> apaterno;
+    cout << "Ingresa tu apellido materno: ";
+    cin >> amaterno;
+    cout << "Ingresa tu edad: ";
+    cin >> edad;
+    cout << "Ingresa tu direccion: ";
+    cin.ignore();
+    getline(cin, direccion);
+    cout << "Ingresa tu numero de telefono: ";
+    cin >> telefono;
+    cout << "Coloca el link de tu curriculum (PDF,Word): ";
+    cin >> linkcuv;
+
+    V[contuser].id = correo;
+    V[contuser].password = contra;
+    V[contuser].nombre1 = nombre;
+    V[contuser].apaterno1 = apaterno;
+    V[contuser].amaterno1 = amaterno;
+    V[contuser].edad1 = edad;
+    V[contuser].direccion1 = direccion;
+    V[contuser].telefono1 = telefono;
+    V[contuser].linkcuv1 = linkcuv;
+    contuser++;
+    cout << "Usuario registrado exitosamente.\n";
+}
